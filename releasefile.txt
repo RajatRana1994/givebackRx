@@ -1,0 +1,3 @@
+D:\LiveProjects\GBRx\gbrxCodeOct\givebackRxApp\app\releasegbrx.jks
+
+alias password=> givebackRxapp

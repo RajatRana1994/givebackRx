@@ -1,0 +1,364 @@
+<resources>
+    <string name="app_name">give<b>back</b>Rx</string>
+
+    <integer name="design_snackbar_text_max_lines">5</integer>
+    <string name="some_error">Something went wrong. Please Try Later!</string>
+    <!--    <string name="google_api_key">AIzaSyBveyEL3kgwhXJjd3IWRXKTZGAgwN0hzUI</string>-->
+    <!--    <string name="google_mapkey">AIzaSyCQLoWckiHcwZ_JqaLsN8J9OBukfKKoRIA</string>-->
+    <string name="google_mapkey">AIzaSyA8fz5TPMwrgiyxZEk5U112RlOaQlw9cMo</string>
+    <string-array name="category">
+        <item>Category</item>
+        <item>Sample</item>
+    </string-array>
+    <string-array name="rec_time">
+        <item>Time</item>
+        <item>Current Week</item>
+        <item>Last Week</item>
+        <item>Current Month</item>
+        <item>Last Month</item>
+        <item>Last Year</item>
+        <item>Current Year</item>
+    </string-array>
+
+    <string-array name="alphabet">
+        <item>Alphabet</item>
+        <item>A-Z</item>
+        <item>Z-A</item>
+    </string-array>
+
+    <string-array name="medication">
+        <item>Medication</item>
+    </string-array>
+    <string-array name="pharmacy">
+        <item>Pharmacy</item>
+    </string-array>
+
+    <string-array name="city_state">
+        <item>State</item>
+        <item>Algeria</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>City</item>
+    </string-array>
+
+    <string-array name="referrals">
+        <item>All</item>
+        <item>Accepted</item>
+        <item>Pending</item>
+        <item>Rejected</item>
+    </string-array>
+
+    <string-array name="tasks">
+        <item>Active</item>
+        <item>Completed</item>
+        <item>Overdue</item>
+    </string-array>
+    <string-array name="quantity">
+        <item>Select Quantity</item>
+        <item>100</item>
+        <item>250</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-Binary</item>
+    </string-array>
+
+    <string-array name="help_ques">
+        <item>Charity Selection</item>
+        <item>Charity Onboarding</item>
+        <item>Coupon Selection</item>
+        <item>My Profile</item>
+        <item>My Referrals</item>
+        <item>Pharmacy</item>
+        <item>Sign Up/Sign In</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="status501">
+        <item>Public Charity</item>
+        <item>Private Foundation</item>
+        <item>Private Operating Foundation</item>
+    </string-array>
+
+    <string-array name="payment_method">
+        <item>ACH</item>
+        <item>Check</item>
+    </string-array>
+
+    <string-array name="noitces">
+        <item>All</item>
+        <item>Unacknowledged</item>
+        <item>Acknowledged</item>
+    </string-array>
+
+    <string-array name="help">
+        <item>All FAQ\'s</item>
+        <item>Customer</item>
+        <item>Pharmacy</item>
+        <item>Charity</item>
+        <item>Partner in Care</item>
+    </string-array>
+    <string-array name="address_type">
+        <item>Select Address Type</item>
+        <item>Home</item>
+        <item>Work</item>
+        <item>Shipping Address</item>
+        <item>Billing Address</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_this_coupon">Get this Coupon</string>
+    <string name="save_per">Save %s</string>
+    <string name="discount_near_you">discounts near you</string>
+    <string name="best_price_">best price $%s</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="clear">Clear</string>
+    <string name="phone_format">(%s) %s-%s</string>
+    <string name="be_well_do_good">be well. do good.</string>
+    <string name="location_permission_dialog">Allow permission to get you location.</string>
+    <string name="terms_policy_text">I authorize give<b>back</b>Rx to use my information as described in the terms &amp; conditions and privacy policy, including sending me additional savings offer and prescription alerts.</string>
+    <string name="by_continuing_you_agree_to_givebackrx_s_term_of_service">By continuing, you agree to give<b>back</b>Rx’s\nTerm of Service.</string>
+    <string name="updrade_to_givebackrx_gold_for_5_mo">Upgrade to give<b>back</b>Rx gold for $5/mo</string>
+    <string name="my_task"><u>My Task</u></string>
+    <string name="my_referrals"><u>My Referrals</u></string>
+    <string name="my_referral">My Referrals</string>
+    <string name="my_notices"><u>My Notices</u></string>
+    <string name="pharmacy_list_msg">The savings breakdown is unable to be calculated for this location. give<b>back</b>Rx customers usually enjoy savings up to 80%.</string>
+
+    <string name="terms_silver">I understand that all transactions using my give<b>back</b>Rx %s card will be available to view in my give<b>back</b>Rx portal in compliance with the terms of use. If you would like to make anonymous purchases you should use give<b>back</b>Rx coupons or charity-specific cards in the "Charities" section.</string>
+    <string name="givebackrx_news">give<b>back</b>Rx News</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="storage_permission_dialog">Allow permission to Add/Edit picture.</string>
+    <string name="donations_from_givebackrx">Donations from give<b>back</b>Rx</string>
+    <string name="save_money_and_giveback_to_spread_the_love_simply_print_your_card_or_receive_it_through_email_or_text_show_it_to_your_pharmacist_to_save_money_on_prescriptions_each_time_you_save_givebackrx_will_donate_to_your_charity">Save money and give<b>back</b> to spread the love. Simply print your card, or receive it through email or text. Show it to your pharmacist to save money on prescriptions. Each time you save, give<b>back</b>Rx will donate to your charity.</string>
+    <string name="use_the_following_url_when_publishing_your_participation_in_givebackrx_all_users_who_click_this_link_will_be_defaulted_to_your_charity_when_they_sign_up">Use the following URL when publishing your participation in give<b>back</b>Rx. All users who click this link will be defaulted to your charity when they sign up.</string>
+    <string name="about_givebackrx_powerpoint">About give<b>back</b>Rx PowerPoint</string>
+    <string name="about_givebackrx_letter">About give<b>back</b>Rx Letter</string>
+    <string name="by_providing_your_mobile_number_not_only_do_you_agree_to_our_sms_terms_and_conditions_privacy_policy_but_also_to_receiving_your_givebackrx_card_and_promotional_messages_via_text_message_and_data_rates_may_apply_frequency_may_vary_text_stop_to_696337_to_opt_out_or_help_for_help">By providing your mobile number, not only do you agree to our SMS Terms and Conditions, Privacy Policy, but also to receiving your givebackRx card and promotional messages via text. Message and data rates may apply. Frequency may vary. Text STOP to 696337 to opt out or HELP for help.</string>
+    <!--    <string name="by_providing_your_mobile_number_not_only_do_you_agree_to_our_sms_terms_and_conditions_privacy_policy_but_also_to_receiving_your_givebackrx_card_and_promotional_messages_via_text_message_and_data_rates_may_apply_frequency_may_vary_text_stop_to_696337_to_opt_out_or_help_for_help">By providing your mobile number, not only do you agree to our SMS Terms and Conditions, Privacy Policy, but also to receiving your give<b>back</b>Rx card and promotional messages via text. Message and data rates may apply. Frequency may vary. Text STOP to 696337 to opt out or HELP for help.</string>-->
+    <string name="i_would_like_to_receive_text_messages_from_givebackrx_related_to_coupons_and_other_updates">I would like to receive text messages from give<b>back</b>Rx related to coupons and other updates.</string>
+    <string name="total_donations_from_givebackrx">Total Donations From give<b>back</b>Rx</string>
+    <string name="givebackrx_silver_free">give<b>back</b>Rx silver | Free</string>
+    <string name="logout_message">Are you sure you want to sign out of give<b>back</b>Rx?</string>
+    <string name="we_re_glad_nyou_re_here_to_ngiveback">We\'re glad\nyou\'re here\nto give<b>back</b>!</string>
+    <string name="givebackrx_gold_5_mo">give<b>back</b>Rx gold | $5/mo</string>
+    <string name="givebackrx_s_price">give<b>back</b>Rx\'s Price</string>
+    <string name="givebackrx_silver">give<b>back</b>Rx silver</string>
+    <string name="givebackrx_gold">give<b>back</b>Rx gold</string>
+    <string name="givebackrx_gold_">give<b>back</b>Rx Gold</string>
+    <string name="goldstring">give<b>back</b>Rx gold</string>
+    <string name="silverstring">give<b>back</b>Rx silver</string>
+    <string name="upgrade_card_bullet"> \u25CB Use this card for discounts of up to 80% on most prescription drugs at over 65,000 U.S. pharmacies.\n\n \u25CB Get discounts for every member of your family!\n\n \u25CB Gold card will automatically renew monthly.</string>
+    <string name="save_up_to_80_on_all_your_prescriptions_using_our_free_silver_card_or_search_below_for_a_single_medication_coupon">save up to 80% on all your prescriptions\nusing our free silver card or search\nbelow for a single medication coupon.</string>
+    <string name="get_a_free_silver_givebackrx_card">get a free silver give<b>back</b>Rx Card</string>
+    <string name="save_money_and_giveback_on_prescriptions_at_your_pharmacy">save money and give<b>back</b> on\nprescriptions at your pharmacy</string>
+    <string name="send_coupon_via_phone">Enter your phone number to send this coupon to:</string>
+    <string name="givebackrx_store">give<b>back</b>Rx store</string>
+    <string name="we_know_givingback_feels_good">We know giving<b>back</b> feels good, and now giving<b>back</b> looks good, too. Get your limited edition give<b>back</b> t-shirt today!</string>
+    <string name="xxxx_xxxx_xxxx_1234">XXXX-XXXX-XXXX-%s</string>
+    <string name="delivery_here">Delivery Here</string>
+    <string name="selected_address">Selected Address</string>
+    <string name="select_address">Select Address</string>
+    <string name="get_6_months_of_givebackrx_gold_membership_for_only_5_use_code_6for1">Get 6 Months of give<b>back</b>Rx Gold Membership for only $5! USE CODE | <b>6FOR1</b></string>
+    <string name="givebackrx_stores">give<b>back</b>Rx Store</string>
+    <string name="good">good.</string>
+    <string name="well">well.</string>
+    <string name="do_data">do</string>
+    <string name="be_data">be</string>
+    <string name="get_started">get started</string>
+    <string name="sign_in">sign in</string>
+    <string name="search_for_your_medication_to_find_the_cheapest_price_for_your_prescriptions_at_your_local_pharmacies">search for your medication to find the cheapest price for your prescriptions at your local pharmacies.</string>
+    <string name="compare_prices">compare prices</string>
+    <string name="find_your_prescription_here">find your prescription here</string>
+    <string name="recent_searches">recent searches</string>
+    <string name="charities">charities</string>
+    <string name="select">Select</string>
+    <string name="my_account">My Account</string>
+    <string name="favorite_medications">Favorite Medications</string>
+    <string name="recent_purchases">Recent Purchases</string>
+    <string name="my_card">My Card</string>
+    <string name="my_charity">My Charity</string>
+    <string name="my_tasks">My Tasks</string>
+    <string name="my_notice">My Notices</string>
+    <string name="my_profile">My Profile</string>
+    <string name="pharmacies_near_me">Pharmacies Near Me</string>
+    <string name="security">Security</string>
+    <string name="change_password">Change Password</string>
+    <string name="notification_preferences">Notification Preferences</string>
+    <string name="update_security">Update Security</string>
+    <string name="share_app">Share App</string>
+    <string name="share_by_message">Share By Message</string>
+    <string name="share_via_instagram">Share Via Instagram</string>
+    <string name="share_via_facebook">Share Via Facebook</string>
+    <string name="share_feedback">Share Feedback</string>
+    <string name="get_help">Get Help</string>
+    <string name="help_ticket">Help Ticket</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="settings">settings</string>
+    <string name="enter_email_address">Please enter your email address:</string>
+    <string name="enter_valid_address">Please enter valid email address:</string>
+    <string name="check_services_terms">Please check and agree terms of service</string>
+    <string name="check_hippa">Please check and agree HIPAA policy</string>
+    <string name="enter_your_phone_number_for_nsigning_up_new_account">enter your phone number for\nsigning up new account</string>
+    <string name="phone_number">PHONE NUMBER</string>
+    <string name="sign_up_by_using">Sign Up by using</string>
+    <string name="email"> Email </string>
+    <string name="next">Next</string>
+    <string name="i_agree_to_the">I agree to the</string>
+    <string name="hipaa_privacy_policy">HIPAA Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service,</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="sign_ins">Sign In</string>
+    <string name="enter_phone_number">Please enter your phone number</string>
+    <string name="enter_valid_number">Please enter valid phone number</string>
+    <string name="welcome_back">welcome back</string>
+    <string name="enter_your_email_and_password_for_signing_in_to_your_account">enter your email and password to sign into your account</string>
+    <string name="email_address">EMAIL ADDRESS</string>
+    <string name="password">PASSWORD</string>
+    <string name="sign_in_with">Sign in using </string>
+    <string name="email_code">Email Code</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="password_length_message">Password must contain upper and lower letters, numerics, and a special character with a min of 8 characters</string>
+    <string name="enter_phone">Please enter phone number</string>
+    <string name="enter_your_phone_number_to_get_the_verification_code_for_signing_in_to_your_account">enter your phone number to sign into your account.</string>
+    <string name="sign_in_by_using">Sign in using </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_your_email_to_get_verification_code_for_signing_in_to_your_account">enter your email to get verification code for signing in to your account.</string>
+    <string name="phone_numbers">Phone Number</string>
+    <string name="passwords">Password</string>
+    <string name="enter_your_email_address">enter your email address:</string>
+    <string name="phone_numberss"> Phone Number</string>
+   <string name="create_your_profile">Create your profile</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="dob">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="address">ADDRESS</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="how_would_you_like_to_receive_your_verification_code_required_for_secure_login">How would you like to receive your verification code required for secure login?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_increate"> Sign In</string>
+    <string name="apt_suite">APT/SUITE</string>
+    <string name="city">CITY</string>
+    <string name="state">STATE</string>
+    <string name="zip_code">ZIP CODE</string>
+    <string name="country">COUNTRY</string>
+    <string name="referral_code">REFERRAL CODE</string>
+    <string name="dashboard">dashboard</string>
+    <string name="money_saved">MONEY SAVED</string>
+    <string name="pending_tasks">PENDING TASKS</string>
+    <string name="referrals_made">REFERRALS MADE</string>
+    <string name="notices_review">NOTICES REVIEW</string>
+    <string name="member_id">MEMBER ID</string>
+    <string name="member_name">MEMBER NAME</string>
+    <string name="charity_name">CHARITY NAME</string>
+    <string name="bin">BIN</string>
+    <string name="group">GROUP</string>
+    <string name="pcn">PCN</string>
+    <string name="this_card_is_not_insurance_this_card_may_provide_a_discount_on_prescriptions_at_the_pharmacy_pharmacists_with_questions_should_call_800_650_1817_customers_please_call_855_769_6337_or_submit_a_request_at_www_givebackrx_com">This card is not insurance. This card may provide a discount on prescriptions at the pharmacy. Pharmacists with questions should call (800) 650-1817. Customers please call (855) 769-6337 or submit a request at www.givebackrx.com</string>
+    <string name="email_space">Email    </string>
+    <string name="phone_space">Phone    </string>
+    <string name="print">Print</string>
+    <string name="your_charity">Your Charity</string>
+    <string name="view_more">View More</string>
+    <string name="select_a_new_charity">Select a New Charity</string>
+    <string name="my_marketing_packet">My Marketing Packet</string>
+    <string name="one_page_pdf">One page PDF</string>
+    <string name="click_to_download">Click to download</string>
+    <string name="printable_card">Printable card</string>
+    <string name="sample_marketing_email">Sample marketing email</string>
+    <string name="referral_upload_template">Referral upload template</string>
+    <string name="enter_email_to_send_card">Enter your email address to send this card to:</string>
+    <string name="enter_phone_no_to_send_card">Enter your phone number to send this card to:</string>
+    <string name="phoneno">Phone number</string>
+    <string name="faq_s">FAQ\'s</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="password_notmatch">Password does not match</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password_lower">Confirm Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="totaldonations">total donations</string>
+    <string name="search_by_name">Search by name</string>
+    <string name="selected">Selected</string>
+    <string name="share_charity_via_text">Share Charity via Text</string>
+    <string name="my_notices_lower">My Notices</string>
+    <string name="acknowledge">Acknowledge</string>
+    <string name="my_tasks_lower">My Tasks</string>
+    <string name="valid_zip">Enter Valid Zip Code</string>
+    <string name="mapview">Map View</string>
+    <string name="listview">List View</string>
+    <string name="coupon_experience_satisfaction">Coupon Experience Satisfaction</string>
+    <string name="promotions">Promotions</string>
+    <string name="set_up_two_factor_authentication_to_sign_in">Set up two-factor authentication to sign in.</string>
+    <string name="to_better_protect_your_account_add_two_factor_authentication_requirement_when_signing_in">To better protect your account, add two-factor authentication requirement when signing in.</string>
+    <string name="card_detail">Card Detail</string>
+    <string name="update_card_for_recurring_payments">Update card for recurring payments</string>
+    <string name="saved_cards">Saved Cards</string>
+    <string name="recurring_message">This card is added for recurring payments of Gold membership. Deleting this card will stop recurring payments. Would you still like to delete this card?</string>
+    <string name="still_delete">Would you still like to delete this card?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="invalid_card_expiry">Invalid card Expiry</string>
+    <string name="enterfirstname">Enter First Name</string>
+    <string name="enterlastname">Enter Last Name</string>
+    <string name="invalidcardnumber">Invalid Card Number</string>
+    <string name="entercorrectno">Enter correct CVV</string>
+    <string name="pleaseenterfeedback">please enter feedback</string>
+    <string name="ratetheapp">Please rate the app!</string>
+    <string name="enterthesuggestion">Please enter your suggestion</string>
+    <string name="thanksforfeedback">Thanks for the feedback!</string>
+    <string name="rated">Rated!</string>
+    <string name="enteremail">Please enter email</string>
+    <string name="entervalidemail">Please enter valid email</string>
+    <string name="donations_by_you">"Donations by you "</string>
+    <string name="category">Category</string>
+    <string name="headquarters">Headquarters</string>
+    <string name="description">Description</string>
+    <string name="forgot_password_lower">forgot password</string>
+    <string name="enter_your_email_address_to_reset_your_account_password">enter your email address to reset your account password.</string>
+    <string name="passwordsmall">Password</string>
+    <string name="sign_up_updte">Sign Up</string>
+    <string name="submit">Submit</string>
+    <string name="edit">Edit</string>
+    <string name="charity_address">Charity Address</string>
+    <string name="primary_phone_number">Primary Phone Number</string>
+    <string name="federal_id_number">Federal ID Number</string>
+    <string name="mailing_address">Mailing Address</string>
+    <string name="preferred_payment_method">Preferred Payment Method</string>
+    <string name="buy_charity_cards">Buy Charity Cards</string>
+    <string name="new_user">New User</string>
+    <string name="charity">Charity</string>
+    <string name="partner_in_care">Partner In Care</string>
+    <string name="thanks_for_nsigning_up">Thanks for\nsigning up.</string>
+    <string name="your_application_is_under_nreview_we_will_take_up_to_n1_week_to_review">Your application is under\nreview we will take up to\n1 week to review.</string>
+    <string name="get_started_cap">Get Started</string>
+    <string name="account_verification">account verification</string>
+    <string name="enter_the_6_digit_code_from_the_email_we_just_sent_to">Enter the 6-digit code from the email we just sent to</string>
+    <string name="verify">Verify</string>
+    <string name="select_categories">Select Categories</string>
+    <string name="save">Save</string>
+    <string name="ok">Ok</string>
+    <string name="view_charity_card">View Charity Card</string>
+    <string name="are_you_sure_you_want_to_downgrade_to_silver">Are you sure you want to downgrade to silver?</string>
+    <string name="keep_plan">keep plan</string>
+    <string name="downgrade_to_silver">downgrade to silver</string>
+    <string name="enter_here">Enter here...</string>
+    <string name="update_card_for_recurring_paymentss">Update card for recurring payments.</string>
+    <string name="first_namea">First Name</string>
+    <string name="last_names">Last Name</string>
+    <string name="card_numbers">Card Number</string>
+    <string name="cvvs">CVV</string>
+    <string name="expiry_dates">Expiry Date</string>
+    <string name="update">Update</string>
+    <string name="email_addresss">Email address</string>
+    <string name="enter_email_here">Enter email here...</string>
+    <string name="send">Send</string>
+    <string name="enter_your_phone_number_to_sign_into_your_account">Enter your phone number to sign into your account.</string>
+</resources>

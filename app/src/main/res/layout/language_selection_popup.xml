@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/shadow_border_bg_more_rounded"
+        android:backgroundTint="@color/white_color"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titleHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:gravity="center"
+            android:padding="@dimen/margin_1x"
+            android:text="Select Language"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_xlarge"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckedTextView
+            android:id="@+id/mTvEnglish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/selector_drug_data"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:minLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="English"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_text_black_greycolor"
+            android:textSize="@dimen/text_mediumLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleHeader" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/white_color"
+            app:layout_constraintBottom_toBottomOf="@+id/mTvEnglish"
+            app:layout_constraintEnd_toEndOf="@+id/mTvEnglish"
+            app:layout_constraintStart_toEndOf="@+id/mTvEnglish"
+            app:layout_constraintTop_toTopOf="@+id/mTvEnglish" />
+
+
+        <CheckedTextView
+            android:id="@+id/mTvSpanish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/selector_drug_data"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:minLines="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Spanish"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_text_black_greycolor"
+            android:textSize="@dimen/text_mediumLarge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTvEnglish" />
+
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_red_giveback"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/red_color"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvDone"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTvSpanish" />
+
+        <TextView
+            android:id="@+id/tvDone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/rounded_green_giveback"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/save"
+            android:textColor="@color/green_color"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvCancel"
+            app:layout_constraintTop_toBottomOf="@+id/mTvSpanish" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

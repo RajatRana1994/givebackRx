@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".appcode.main.settings.myNoticesModule.MyNoticesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dashboard_gradient_bg"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:padding="@dimen/margin_1x"
+            android:text="Add New Address"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/top_radius_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_2x"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_2x"
+                    android:elevation="2dp"
+                    android:paddingBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPharmacyCate">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="10dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="10dp" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="First Name *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/textView10"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Last Name *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView9"
+                        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+                    <EditText
+                        android:id="@+id/etFname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="0dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView9"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <EditText
+                        android:id="@+id/etLname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+
+                    <TextView
+                        android:id="@+id/tvAddressType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Address Type *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/edtAddressType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackrxroundwhite"
+                        android:elevation="1dp"
+                        android:visibility="gone"
+                        android:foregroundTint="@color/light_gray_color"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddressType">
+
+                        <Spinner
+                            android:id="@+id/spinnerAddressType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/address_type"
+                            android:paddingTop="@dimen/margin_2x"
+                            android:paddingBottom="@dimen/margin_2x"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Apt/Suite"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+
+                    <EditText
+                        android:id="@+id/etAptSuite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Address *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etLname" />
+
+                    <TextView
+                        android:id="@+id/etAddressa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:visibility="gone"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:visibility="visible"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="City *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/textView25"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/etAptSuite" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="State *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView24"
+                        app:layout_constraintTop_toBottomOf="@+id/etAptSuite" />
+
+                    <EditText
+                        android:id="@+id/edtCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView24"
+                        app:layout_constraintStart_toStartOf="@+id/textView24"
+                        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                    <Spinner
+                        android:id="@+id/edtState"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:drawableEnd="@drawable/ic_dropdown"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingEnd="@dimen/small_margin"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtCity"
+                        app:layout_constraintEnd_toEndOf="@+id/textView25"
+                        app:layout_constraintStart_toStartOf="@+id/textView25"
+                        app:layout_constraintTop_toTopOf="@+id/edtCity" />
+
+
+                    <TextView
+                        android:id="@+id/textView241"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Country *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/textView251"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/textView13"
+                        app:layout_constraintTop_toBottomOf="@+id/edtCity" />
+
+                    <TextView
+                        android:id="@+id/textView251"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="ZIP Code *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView241"
+                        app:layout_constraintTop_toBottomOf="@+id/edtCity" />
+
+                    <TextView
+                        android:id="@+id/edtCountry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:text="USA"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView241"
+                        app:layout_constraintStart_toStartOf="@+id/textView241"
+                        app:layout_constraintTop_toBottomOf="@+id/textView241" />
+
+                    <EditText
+                        android:id="@+id/edtZIPCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView251"
+                        app:layout_constraintStart_toStartOf="@+id/textView251"
+                        app:layout_constraintTop_toBottomOf="@+id/textView251" />
+
+
+                    <TextView
+                        android:id="@+id/textView121"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Phone Number *"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/edtZIPCode" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/givebackroundedetbg"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="phone"
+                        android:padding="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView121" />
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/givebackroundbutton"
+                        android:fontFamily="@font/robotoregular"
+                        android:minWidth="180dp"
+                        android:text="Submit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

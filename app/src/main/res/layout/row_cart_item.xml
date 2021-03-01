@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="1dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="@dimen/margin_1x"
+        android:elevation="1dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shadow_border_bg_more_rounded"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/mIvImage"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:background="@drawable/rounded_et_bg"
+        android:padding="0.2dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mIvImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mIvImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:minWidth="@dimen/margin_15x"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="2dp"
+        android:textSize="@dimen/text_medium"
+        android:layout_marginStart="@dimen/margin_1x"
+        app:layout_constraintStart_toEndOf="@+id/mIvImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:layout_marginTop="2dp"
+        android:text="Qty:"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toEndOf="@+id/tvSize"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_red"
+        android:padding="2dp"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/tvQty"
+        app:layout_constraintEnd_toStartOf="@+id/tvQtyCount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/tvQty"
+        app:layout_constraintTop_toTopOf="@+id/tvQty" />
+
+    <TextView
+        android:id="@+id/tvQtyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:minWidth="@dimen/margin_8x"
+        android:padding="@dimen/margin_1x"
+        android:text="1"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toStartOf="@+id/ivMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivAdd"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <ImageView
+        android:id="@+id/ivMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_red"
+        android:padding="2dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@+id/tvQtyCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvQtyCount"
+        app:layout_constraintTop_toTopOf="@+id/tvQtyCount" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:background="@color/grey_color_as_silver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mIvImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivMinus" />
+
+    <TextView
+        android:id="@+id/tvRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:minWidth="@dimen/margin_9x"
+        android:padding="@dimen/margin_1x"
+        android:text="Remove"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvCharityCardTag"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_label"
+        android:fontFamily="@font/robotoregular"
+        android:paddingStart="8dp"
+        android:elevation="1dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="4dp"
+        android:visibility="gone"
+        android:text="Charity Card"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

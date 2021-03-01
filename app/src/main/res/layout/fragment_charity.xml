@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".appcode.selectCharityModule.SelectCharityActivity">
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="@dimen/margin_1x"
+        android:visibility="gone"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_2x"
+        android:text="@string/charities"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="10dp" />
+
+    <TextView
+        android:id="@+id/tvTitleCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_2x"
+        android:text="Charities"
+        android:visibility="gone"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_xxlarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="10dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="8sp"
+        android:background="@drawable/loader_bg"
+        android:src="@drawable/ic_charity"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8sp"
+        android:background="@drawable/shape_rounded_border"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/white_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ivUserImage"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+    <TextView
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:background="@drawable/shape_rounded_border"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:backgroundTint="@color/white_color"
+        android:paddingBottom="5dp"
+        android:text="@string/get_started"
+        android:textColor="@color/green_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvLogin"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:background="@drawable/top_radius_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/light_gray_color_new_lighter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_width="192dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="4dp"
+                android:dropDownWidth="150dp"
+                android:entries="@array/category"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toStartOf="@+id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/spinnerCategory" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/light_gray_color"
+                app:layout_constraintBottom_toBottomOf="@+id/spinnerCategory"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerAlpha"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinnerCategory"
+                app:layout_constraintTop_toTopOf="@id/spinnerCategory" />
+
+            <Spinner
+                android:id="@+id/spinnerAlpha"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="4dp"
+                android:dropDownWidth="120dp"
+                android:entries="@array/alphabet"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinnerCity"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="4dp"
+                android:dropDownWidth="150dp"
+                android:visibility="gone"
+                android:entries="@array/cities"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/divider2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCategory" />
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/light_gray_color"
+                app:layout_constraintBottom_toBottomOf="@id/spinnerCity"
+                app:layout_constraintEnd_toStartOf="@+id/spinnerState"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/spinnerCity"
+                app:layout_constraintTop_toTopOf="@id/spinnerCity" />
+
+            <Spinner
+                android:id="@+id/spinnerState"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:dropDownWidth="150dp"
+                android:entries="@array/city_state"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/divider2"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerCategory" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_et_bg"
+            android:drawableStart="@drawable/ic_search_white"
+            android:drawablePadding="@dimen/margin_1x"
+            android:drawableTint="@color/text_color"
+            android:ems="10"
+            android:hint="Search by name"
+            android:visibility="gone"
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_1x"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCharity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:itemCount="5"
+            tools:listitem="@layout/row_item_charity" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

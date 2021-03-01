@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".appcode.charitysignee.CharitySigneeActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/margin_10x"
+        android:layout_height="@dimen/margin_10x"
+        android:layout_marginEnd="10dp"
+        android:padding="@dimen/small_margin"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:text="add charity"
+        android:textColor="@color/blue_color_dark"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/signeeTabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_bg_rect_top_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+        <CheckedTextView
+            android:id="@+id/signeeInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_text_blue_underline"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:checked="true"
+            android:text="Charity Signee Information"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_text_black_blue"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toStartOf="@+id/charityInfo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ivSigneeInfo"
+            android:layout_width="@dimen/margin_4x"
+            android:layout_height="@dimen/margin_4x"
+            android:text="i"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:textColor="@color/black_color"
+            android:background="@drawable/shape_rounded_black"
+            app:layout_constraintBottom_toBottomOf="@+id/signeeInfo"
+            app:layout_constraintEnd_toEndOf="@id/signeeInfo"/>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/light_gray_color_new"
+            app:layout_constraintBottom_toBottomOf="@+id/signeeInfo"
+            app:layout_constraintEnd_toEndOf="@+id/signeeInfo"
+            app:layout_constraintStart_toEndOf="@+id/signeeInfo"
+            app:layout_constraintTop_toTopOf="@+id/signeeInfo" />
+
+        <CheckedTextView
+            android:id="@+id/charityInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_text_blue_underline"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Charity\nInformation"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_text_black_blue"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toStartOf="@+id/financialInfo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/signeeInfo"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/ivCharityInfo"
+            android:layout_width="@dimen/margin_4x"
+            android:layout_height="@dimen/margin_4x"
+            android:text="i"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:textColor="@color/black_color"
+            android:background="@drawable/shape_rounded_black"
+            app:layout_constraintBottom_toBottomOf="@+id/charityInfo"
+            app:layout_constraintEnd_toEndOf="@id/charityInfo"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/light_gray_color_new"
+            app:layout_constraintBottom_toBottomOf="@+id/charityInfo"
+            app:layout_constraintEnd_toEndOf="@+id/charityInfo"
+            app:layout_constraintStart_toEndOf="@+id/charityInfo"
+            app:layout_constraintTop_toTopOf="@+id/charityInfo" />
+
+        <CheckedTextView
+            android:id="@+id/financialInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_text_blue_underline"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:minLines="2"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Charity Financial Information"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_text_black_blue"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/charityInfo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ivFinancialInfo"
+            android:layout_width="@dimen/margin_4x"
+            android:layout_height="@dimen/margin_4x"
+            android:text="i"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:textColor="@color/black_color"
+            android:background="@drawable/shape_rounded_black"
+            app:layout_constraintBottom_toBottomOf="@+id/financialInfo"
+            app:layout_constraintEnd_toEndOf="@id/financialInfo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signeeTabs">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signeeInfoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:paddingBottom="20dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/lblFirst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="FIRST NAME"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/lblLast"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/lblLast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="LAST NAME"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/lblFirst"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etFname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblFirst"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblFirst" />
+
+                <EditText
+                    android:id="@+id/etLname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblLast"
+                    app:layout_constraintTop_toBottomOf="@+id/lblLast" />
+
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="PHONE NUMBER"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etFname" />
+
+                <EditText
+                    android:id="@+id/etPhonenNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="phone"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="EMAIL ADDRESS"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPhonenNo" />
+
+                <EditText
+                    android:id="@+id/etEmailId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView133"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="DOB"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmailId" />
+
+                <TextView
+                    android:id="@+id/etDob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView133" />
+
+                <TextView
+                    android:id="@+id/textView1331"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Gender"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etDob" />
+
+                <Spinner
+                    android:id="@+id/spinnerGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gender"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:paddingTop="@dimen/margin_2x"
+                    android:paddingBottom="@dimen/margin_2x"
+                    android:layout_marginTop="@dimen/margin_1x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textView1331"
+                    app:layout_constraintTop_toBottomOf="@id/textView1331" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Organizational Role"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
+
+                <EditText
+                    android:id="@+id/etOrganizational"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="PASSWORD"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView15"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etOrganizational" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="CONFIRM PASSWORD"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView14"
+                    app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textPassword|textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <EditText
+                    android:id="@+id/etCPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textPassword|textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+                    app:layout_constraintEnd_toEndOf="@+id/textView15"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/charityInfoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toBottomOf="@+id/signeeInfoLayout"
+                >
+
+                <TextView
+                    android:id="@+id/lblCharityName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity Name"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <EditText
+                    android:id="@+id/etCharityName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityName" />
+
+
+                <TextView
+                    android:id="@+id/lblAptSuite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Address Line 2"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityAddress" />
+
+                <TextView
+                    android:id="@+id/lblCharityAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity Address"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityName" />
+
+                <EditText
+                    android:id="@+id/etAptSuite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblAptSuite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAptSuite" />
+
+                <EditText
+                    android:id="@+id/etCharityAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblCharityAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityAddress" />
+
+                <TextView
+                    android:id="@+id/lblCharityCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity City"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/lblCharityState"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAptSuite"/>
+
+                <TextView
+                    android:id="@+id/lblCharityState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity State"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/lblCharityCity"
+                    app:layout_constraintTop_toBottomOf="@+id/etAptSuite" />
+
+
+                <EditText
+                    android:id="@+id/etCharityCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblCharityCity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityCity" />
+
+
+                <Spinner
+                    android:id="@+id/etCharityState"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_dropdown"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:paddingTop="@dimen/margin_2x"
+                    android:paddingEnd="@dimen/small_margin"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:paddingBottom="@dimen/margin_2x"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/etCharityCity"
+                    app:layout_constraintStart_toStartOf="@+id/lblCharityState"
+                    app:layout_constraintTop_toTopOf="@+id/etCharityCity"/>
+
+
+                <TextView
+                    android:id="@+id/lblCharityCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity Country"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/lblCharityZIP"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityState"/>
+
+                <TextView
+                    android:id="@+id/lblCharityZIP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Charity Zip"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/lblCharityCountry"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityState" />
+
+
+                <TextView
+                    android:id="@+id/etCharityCountry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="USA"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblCharityCountry"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityCountry" />
+
+                <EditText
+                    android:id="@+id/etCharityZIP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:maxLength="6"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblCharityZIP"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityZIP" />
+
+                <TextView
+                    android:id="@+id/lblMainPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Main Phone Number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toStartOf="@+id/lblCharityWebsite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityZIP"/>
+
+                <TextView
+                    android:id="@+id/lblCharityWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Website URL"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/lblMainPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityZIP" />
+
+
+                <EditText
+                    android:id="@+id/etMainPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="phone"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblMainPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblMainPhone" />
+
+                <EditText
+                    android:id="@+id/etCharityWebsite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblCharityWebsite"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityWebsite" />
+
+
+                <TextView
+                    android:id="@+id/lblFederalID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Federal ID Number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityWebsite"/>
+
+
+
+                <EditText
+                    android:id="@+id/etFederalID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="phone"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/lblFederalID"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblFederalID" />
+                <TextView
+                    android:id="@+id/lblStatus501"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="501(c)(3) Status"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/etFederalID"
+                    app:layout_constraintTop_toBottomOf="@+id/etFederalID" />
+
+                <Spinner
+                    android:id="@+id/etStatus501"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/status501"
+                    android:paddingTop="@dimen/margin_2x"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:paddingBottom="@dimen/margin_2x"
+                    android:layout_marginTop="@dimen/margin_1x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblStatus501"
+                    app:layout_constraintTop_toBottomOf="@+id/lblStatus501" />
+
+                <TextView
+                    android:id="@+id/lblCharityUnder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Indicate all categories your charity falls under"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etStatus501" />
+
+                <TextView
+                    android:id="@+id/etCharityCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:text="Select Category"
+                    android:fontFamily="@font/robotoregular"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/hint_forgot_text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityUnder" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="0dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCharityCategory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:id="@+id/lblCharityPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Upload Charity Logo"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rvCategory" />
+
+                <TextView
+                    android:id="@+id/etUploadPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharityPhoto" />
+                <TextView
+                    android:id="@+id/tvUploadPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Choose File"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_medium"
+                    android:gravity="center"
+                    android:layout_margin="1dp"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    app:layout_constraintTop_toTopOf="@+id/etUploadPhoto"
+                    app:layout_constraintBottom_toBottomOf="@+id/etUploadPhoto"
+                    app:layout_constraintEnd_toEndOf="@id/etUploadPhoto"
+                    android:background="@color/red_color"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblAdditionalPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Additional picture that represents your charity "
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etUploadPhoto" />
+
+                <TextView
+                    android:id="@+id/etAdditionalPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAdditionalPhoto" />
+                <TextView
+                    android:id="@+id/tvAdditionalPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="Choose File"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_medium"
+                    android:gravity="center"
+                    android:layout_margin="1dp"
+                    android:textStyle="bold"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    app:layout_constraintTop_toTopOf="@+id/etAdditionalPhoto"
+                    app:layout_constraintBottom_toBottomOf="@+id/etAdditionalPhoto"
+                    app:layout_constraintEnd_toEndOf="@id/etAdditionalPhoto"
+                    android:background="@color/red_color"/>
+
+
+
+                <TextView
+                    android:id="@+id/lblShortDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Short description of your charity"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAdditionalPhoto" />
+
+                <EditText
+                    android:id="@+id/etShortDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:minHeight="80dp"
+                    android:maxHeight="80dp"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblShortDesc" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/financialInfoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintTop_toBottomOf="@+id/charityInfoLayout"
+                >
+
+                <TextView
+                    android:id="@+id/lblPaymentMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Preferred Payment Method"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPaymentMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/payment_method"
+                    android:paddingTop="@dimen/margin_2x"
+                    android:paddingBottom="@dimen/margin_2x"
+                    android:layout_marginTop="@dimen/margin_1x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/lblPaymentMethod"
+                    app:layout_constraintTop_toBottomOf="@id/lblPaymentMethod" />
+
+
+                <TextView
+                    android:id="@+id/lblRounting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Routing Number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerPaymentMethod"/>
+
+
+                <EditText
+                    android:id="@+id/etRounting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="number"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblRounting" />
+
+
+                <TextView
+                    android:id="@+id/lblAccountNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Checking Account Number"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etRounting"/>
+
+
+                <EditText
+                    android:id="@+id/etAccountNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="number"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAccountNum" />
+
+                <TextView
+                    android:id="@+id/lblAddressFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Address to which check should be made "
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAccountNum"/>
+
+
+                <EditText
+                    android:id="@+id/etAddressFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblAddressFinancial" />
+
+                <TextView
+                    android:id="@+id/lblCityFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="City"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etAddressFinancial" />
+
+
+                <EditText
+                    android:id="@+id/etCityFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblCityFinancial"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCityFinancial" />
+
+
+                <TextView
+                    android:id="@+id/lblStateFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Address to which check should be made "
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etCityFinancial"/>
+
+                <Spinner
+                    android:id="@+id/spinnerStateFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gender"
+                    android:paddingTop="@dimen/margin_2x"
+                    android:paddingBottom="@dimen/margin_2x"
+                    android:layout_marginTop="@dimen/margin_1x"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/lblPaymentMethod"
+                    app:layout_constraintTop_toBottomOf="@id/lblStateFinancial" />
+
+
+                <TextView
+                    android:id="@+id/lblZipFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Zip Code"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinnerStateFinancial" />
+
+
+                <EditText
+                    android:id="@+id/etZipFinancial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/givebackroundedetbg"
+                    android:ems="10"
+                    android:digits="0123456789"
+                    android:fontFamily="@font/robotoregular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/margin_2x"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/lblCityFinancial"
+                    app:layout_constraintTop_toBottomOf="@+id/lblZipFinancial" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/givebackroundbutton"
+        android:fontFamily="@font/robotoregular"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView18"/>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Already have an account?"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignIn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Sign In"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintBottom_toBottomOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

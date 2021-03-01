@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "209642338606",
+    "firebase_url": "https://givebackrx-pharmacy-locator.firebaseio.com",
+    "project_id": "givebackrx-pharmacy-locator",
+    "storage_bucket": "givebackrx-pharmacy-locator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209642338606:android:2f12bd90a05062afb662bf",
+        "android_client_info": {
+          "package_name": "com.app.givebackrx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "209642338606-se0voj5u8gj8rl914n18bn92v2eg414q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8fz5TPMwrgiyxZEk5U112RlOaQlw9cMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "209642338606-se0voj5u8gj8rl914n18bn92v2eg414q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

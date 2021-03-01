@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".appcode.profileModule.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dashboard_gradient_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/robotoregular"
+            android:padding="@dimen/margin_1x"
+            android:text="Profile"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivBack"
+            app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+        <TextView
+            android:id="@+id/tvEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8sp"
+            android:background="@drawable/shape_rounded_border"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:backgroundTint="@color/red_color"
+            android:paddingBottom="5dp"
+            android:text="Edit"
+            android:textColor="@color/white_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8sp"
+            android:background="@drawable/shape_rounded_border"
+            android:paddingStart="16dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="5dp"
+            android:text="Save"
+            android:textColor="@color/white_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:background="@drawable/top_radius_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:id="@+id/parentLayout"
+                    android:paddingBottom="40dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPharmacyCate">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="16dp" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="16dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivUser"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="32dp"
+                        android:src="@mipmap/ic_launcher"
+                        app:layout_constraintCircleRadius="100dp"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivEditUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_color"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/white_color"
+                        android:visibility="gone"
+                        android:background="@drawable/givebackrxroundwhite"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/ivUser"
+                        app:layout_constraintTop_toTopOf="@+id/ivUser" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="@dimen/medium_margin"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName"
+                        android:text="TextView"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toEndOf="@+id/ivUser"
+                        app:layout_constraintTop_toTopOf="@+id/ivUser" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName"
+                        android:text="TextView"
+                        android:layout_marginEnd="@dimen/margin_6x"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@+id/ivUser"
+                        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                    <TextView
+                        android:id="@+id/tvfname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="4dp"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="First Name"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/tvlname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+                    <TextView
+                        android:id="@+id/tvlname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Last Name"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tvfname"
+                        app:layout_constraintTop_toTopOf="@+id/tvfname" />
+
+                    <EditText
+                        android:id="@+id/etFname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName|textCapSentences"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/etLname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/tvfname"
+                        app:layout_constraintTop_toBottomOf="@+id/tvfname" />
+
+                    <EditText
+                        android:id="@+id/etLname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textPersonName|textCapSentences"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/tvlname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/etFname"
+                        app:layout_constraintTop_toTopOf="@+id/etFname" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Phone Number"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etFname" />
+
+                    <EditText
+                        android:id="@+id/etPhonenNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="phone"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivEditUserPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:backgroundTint="@color/white_color"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/white_color"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Secondary Email Address"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etPhonenNo" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivEditUserSecondaryEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:backgroundTint="@color/white_color"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/white_color"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+                    <EditText
+                        android:id="@+id/etEmailId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textEmailAddress"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+                    <TextView
+                        android:id="@+id/textView111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Secondary Phone Number"
+                        android:textColor="@color/text_color"
+                        android:visibility="visible"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etEmailId" />
+
+                    <EditText
+                        android:id="@+id/etSecPhonenNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="phone"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:visibility="visible"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView111" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivEditUserSecPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:backgroundTint="@color/white_color"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/white_color"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView111"
+                        app:layout_constraintStart_toEndOf="@+id/textView111"
+                        app:layout_constraintTop_toTopOf="@+id/textView111" />
+
+
+
+                    <TextView
+                        android:id="@+id/textView1331"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Gender"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etSecPhonenNo" />
+
+
+                    <Spinner
+                        android:id="@+id/spinnerGender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/gender"
+                        android:paddingTop="@dimen/small_margin"
+                        android:paddingStart="@dimen/small_margin"
+                        android:paddingBottom="@dimen/small_margin"
+                        android:layout_marginTop="@dimen/margin_1x"
+                        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@id/textView1331"
+                        app:layout_constraintTop_toBottomOf="@id/textView1331" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_color"
+                        app:layout_constraintEnd_toEndOf="@id/spinnerGender"
+                        app:layout_constraintStart_toStartOf="@id/spinnerGender"
+                        app:layout_constraintTop_toBottomOf="@id/spinnerGender" />
+
+
+                    <TextView
+                        android:id="@+id/textView131"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="DOB"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
+
+                    <TextView
+                        android:id="@+id/etDob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:paddingStart="@dimen/small_margin"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_color"
+                        app:layout_constraintEnd_toEndOf="@id/etDob"
+                        app:layout_constraintStart_toStartOf="@id/etDob"
+                        app:layout_constraintTop_toBottomOf="@id/etDob" />
+
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Address"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etDob" />
+
+                    <TextView
+                        android:id="@+id/etAddressa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_color"
+                        app:layout_constraintEnd_toEndOf="@id/etAddressa"
+                        app:layout_constraintStart_toStartOf="@id/etAddressa"
+                        app:layout_constraintTop_toBottomOf="@id/etAddressa" />
+
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Apt/Suite"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView23"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etAddressa" />
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="City"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView21"
+                        app:layout_constraintTop_toBottomOf="@+id/etAddressa" />
+
+                    <EditText
+                        android:id="@+id/etAptNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toEndOf="@+id/textView21"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                    <EditText
+                        android:id="@+id/etCity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/textView23"
+                        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="State"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView25"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etAptNumber" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="ZIP Code"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView24"
+                        app:layout_constraintTop_toBottomOf="@+id/etCity" />
+
+                    <Spinner
+                        android:id="@+id/etState"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:drawableEnd="@drawable/ic_dropdown"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingEnd="@dimen/small_margin"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="@+id/etZipcode"
+                        app:layout_constraintEnd_toEndOf="@+id/textView24"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_color"
+                        app:layout_constraintEnd_toEndOf="@id/etState"
+                        app:layout_constraintStart_toStartOf="@id/etState"
+                        app:layout_constraintTop_toBottomOf="@id/etState" />
+
+                    <EditText
+                        android:id="@+id/etZipcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/textView25"
+                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:paddingStart="@dimen/margin_1x"
+                        android:text="Country"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_mediumLarge"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/textView26"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/etState" />
+
+                    <TextView
+                        android:id="@+id/etCountry"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:fontFamily="@font/robotoregular"
+                        android:inputType="textCapSentences"
+                        android:paddingStart="@dimen/small_margin"
+                        android:paddingTop="@dimen/margin_2x"
+                        android:paddingBottom="@dimen/margin_2x"
+                        android:singleLine="true"
+                        android:text="USA"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_small"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/light_gray_color"
+                        app:layout_constraintEnd_toEndOf="@id/etCountry"
+                        app:layout_constraintStart_toStartOf="@id/etCountry"
+                        app:layout_constraintTop_toBottomOf="@id/etCountry" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivEditUserEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="2dp"
+                        android:visibility="gone"
+                        android:backgroundTint="@color/white_color"
+                        android:src="@drawable/ic_edit"
+                        android:tint="@color/white_color"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tvEmail"
+                        app:layout_constraintTop_toTopOf="@+id/tvEmail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

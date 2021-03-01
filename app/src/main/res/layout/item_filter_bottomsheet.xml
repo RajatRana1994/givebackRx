@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:paddingBottom="10dp">
+
+
+    <TextView
+        android:id="@+id/tvFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Filter Pharmacy"
+        android:textColor="@color/dark_gray_color"
+        android:textSize="@dimen/text_mediumLarge"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Close"
+        android:textColor="@color/light_gray_color"
+        android:textSize="@dimen/text_mediumLarge"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvFilter" />
+
+    <CheckedTextView
+        android:id="@+id/tvBrands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|start"
+        android:minWidth="180dp"
+        android:minLines="2"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Product Name"
+        android:textColor="@drawable/selector_grey_purple"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rvValues"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFilter" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintEnd_toEndOf="@id/tvBrands"
+        app:layout_constraintStart_toStartOf="@id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvBrands" />
+
+    <CheckedTextView
+        android:id="@+id/tvForms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|start"
+        android:minLines="2"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Form"
+        android:textColor="@drawable/selector_grey_purple"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toStartOf="@+id/rvValues"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBrands" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintEnd_toEndOf="@id/tvBrands"
+        app:layout_constraintStart_toStartOf="@id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvForms" />
+
+    <CheckedTextView
+        android:id="@+id/tvDose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|start"
+        android:minLines="2"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Dosage"
+        android:textColor="@drawable/selector_grey_purple"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toStartOf="@+id/rvValues"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForms" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintEnd_toEndOf="@id/tvBrands"
+        app:layout_constraintStart_toStartOf="@id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvDose" />
+
+    <CheckedTextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|start"
+        android:minWidth="70dp"
+        android:minLines="2"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Quantity"
+        android:textColor="@drawable/selector_grey_purple"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvDose"
+        app:layout_constraintEnd_toStartOf="@+id/rvValues"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDose" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintEnd_toEndOf="@id/tvBrands"
+        app:layout_constraintStart_toStartOf="@id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuantity" />
+
+    <EditText
+        android:id="@+id/edtQty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="40dp"
+        android:hint="Quantity"
+        android:visibility="gone"
+        android:layout_margin="@dimen/margin_1x"
+        android:padding="@dimen/margin_1x"
+        android:maxLength="3"
+        android:background="@drawable/givebackroundedetbg"
+        android:inputType="number"
+        android:textColorHint="@color/grey_color_as_silver"
+        android:textColor="@color/black_color"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/tvFilter" />
+
+    <TextView
+        android:id="@+id/btnQty"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/givebackroundedetbg"
+        android:backgroundTint="@color/dark_gray_color"
+        android:paddingStart="@dimen/small_margin"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:paddingEnd="@dimen/small_margin"
+        android:layout_margin="1dp"
+        android:text="Set"
+        android:gravity="center"
+        android:textColor="@color/black_color"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtQty"
+        app:layout_constraintEnd_toEndOf="@id/edtQty"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="@+id/edtQty" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvValues"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvBrands"
+        app:layout_constraintTop_toBottomOf="@+id/edtQty"
+        tools:listitem="@layout/item_filter_single" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="2dp"
+        android:background="@color/light_gray_color_new"
+        app:layout_constraintBottom_toBottomOf="@+id/rvValues"
+        app:layout_constraintEnd_toEndOf="@id/tvBrands"
+        app:layout_constraintTop_toTopOf="@id/rvValues" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/rounded_et_bg"
+        android:backgroundTint="@color/light_gray_color_new"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:minLines="2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/dark_gray_color"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvApply"
+        app:layout_constraintEnd_toStartOf="@+id/tvApply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvApply" />
+
+    <TextView
+        android:id="@+id/tvApply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_et_bg"
+        android:backgroundTint="@color/green_color"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:minLines="2"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/apply"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvCancel"
+        app:layout_constraintTop_toBottomOf="@+id/rvValues" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

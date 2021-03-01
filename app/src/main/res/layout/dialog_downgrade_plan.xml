@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/downgrade_to_silver"
+        android:textColor="@color/dark_gray_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtFeedbackForDowngrade"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/givebackroundedetbg"
+        android:ems="10"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="top"
+        android:hint="@string/enter_here"
+        android:inputType="textCapSentences"
+        android:maxLines="10"
+        android:padding="@dimen/margin_2x"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+    <TextView
+        android:id="@+id/btnDowngrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/margin_5x"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/margin_5x"
+        android:background="@drawable/givebackroundbutton"
+        android:backgroundTint="@color/red_color"
+        android:gravity="center"
+        android:minWidth="220dp"
+        android:padding="8dp"
+        android:text="@string/downgrade_to_silver"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFeedbackForDowngrade" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_clear_white_24dp"
+        app:tint="@color/black_color" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient"
+    tools:context=".appcode.splashModule.SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3"
+        app:srcCompat="@drawable/ic_gbrx_banner" />
+
+    <TextView
+        android:id="@+id/tvBe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_1x"
+        android:fontFamily="@font/robotothin"
+        android:text="@string/be_data"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_xxxxxlarge"
+        app:layout_constraintBottom_toTopOf="@+id/tvDO"
+        app:layout_constraintEnd_toStartOf="@+id/tvWell"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="628dp" />
+
+    <TextView
+        android:id="@+id/tvWell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginBottom="@dimen/margin_1x"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/well"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_xxxxxlarge"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvDO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvBe"
+        tools:layout_editor_absoluteY="634dp" />
+
+    <TextView
+        android:id="@+id/tvDO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8x"
+        android:fontFamily="@font/robotothin"
+        android:text="@string/do_data"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_xxxxxlarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvGood"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias=".9" />
+
+    <TextView
+        android:id="@+id/tvGood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:fontFamily="@font/robotoregular"
+        android:text="@string/good"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_xxxxxlarge"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDO"
+        app:layout_constraintTop_toTopOf="@+id/tvDO" />
+</androidx.constraintlayout.widget.ConstraintLayout>

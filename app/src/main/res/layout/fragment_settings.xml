@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple_gradient"
+    tools:context=".appcode.main.home.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:fontFamily="@font/robotoregular"
+        android:paddingTop="@dimen/margin_2x"
+        android:paddingBottom="@dimen/margin_2x"
+        android:text="@string/settings"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="10dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_margin="8sp"
+        android:background="@drawable/loader_bg"
+        android:src="@drawable/ic_charity"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintCircleRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8sp"
+        android:background="@drawable/shape_rounded_border"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/white_color"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@+id/ivUserImage"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:background="@drawable/shape_rounded_border"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="10dp"
+        android:backgroundTint="@color/white_color"
+        android:paddingBottom="5dp"
+        android:text="@string/get_started"
+        android:textColor="@color/pink_color"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLogin"
+        app:layout_constraintEnd_toStartOf="@+id/tvLogin"
+        app:layout_constraintTop_toTopOf="@+id/tvLogin" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:background="@drawable/top_radius_bg"
+            android:paddingBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <TextView
+                android:id="@+id/tvDashboard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_dashboard"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="DashBoard"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/tvDashboard"
+                app:layout_constraintStart_toStartOf="@+id/tvDashboard"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+
+            <TextView
+                android:id="@+id/tvAboutMe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_my_profile_on"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_account"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDashboard"
+                app:layout_goneMarginStart="10dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groutAboutMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="view,view2,tvUpdateCharity,view3,view4,tvMyTasks,tvMyReferrals,view5,view6,tvMyProfile,tvMyNotices" />
+
+            <TextView
+                android:id="@+id/tvFavMedications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:drawableStart="@drawable/ic_favorite_medications_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/favorite_medications"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvAboutMe"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvFavMedications"
+                app:layout_constraintStart_toStartOf="@+id/tvFavMedications"
+                app:layout_constraintTop_toBottomOf="@+id/tvFavMedications" />
+
+            <TextView
+                android:id="@+id/tvRecentPurchases"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_recent_purchase"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/recent_purchases"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvFavMedications"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvRecentPurchases"
+                app:layout_constraintStart_toStartOf="@+id/tvRecentPurchases"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecentPurchases" />
+
+            <TextView
+                android:id="@+id/tvUpdateCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_card_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_card"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvRecentPurchases"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvUpdateCard"
+                app:layout_constraintStart_toStartOf="@+id/tvUpdateCard"
+                app:layout_constraintTop_toBottomOf="@+id/tvUpdateCard" />
+
+            <TextView
+                android:id="@+id/tvUpdateCharity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_charity_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_charity"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvUpdateCard"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvUpdateCharity"
+                app:layout_constraintStart_toStartOf="@+id/tvUpdateCharity"
+                app:layout_constraintTop_toBottomOf="@+id/tvUpdateCharity" />
+
+            <TextView
+                android:id="@+id/tvMyTasks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_tasks_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_tasks"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvUpdateCharity"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvMyTasks"
+                app:layout_constraintStart_toStartOf="@+id/tvMyTasks"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyTasks" />
+
+            <TextView
+                android:id="@+id/tvMyReferrals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_referrals_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_referral"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyTasks"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvMyReferrals"
+                app:layout_constraintStart_toStartOf="@+id/tvMyReferrals"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyReferrals" />
+
+            <TextView
+                android:id="@+id/tvMyNotices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_notices_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_notice"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyReferrals"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvMyNotices"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyNotices" />
+
+            <TextView
+                android:id="@+id/tvMyProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="@dimen/margin_1_1x"
+                android:drawableStart="@drawable/ic_my_profile_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/my_profile"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvAboutMe"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyNotices"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvMyProfile"
+                app:layout_constraintStart_toStartOf="@+id/tvAboutMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyProfile" />
+
+            <TextView
+                android:id="@+id/tvNearMe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_pharmacies_near_me_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/pharmacies_near_me"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMyProfile"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvNearMe"
+                app:layout_constraintStart_toStartOf="@+id/tvNearMe"
+                app:layout_constraintTop_toBottomOf="@+id/tvNearMe" />
+
+            <TextView
+                android:id="@+id/tvSecurity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_favorite_medications_on"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/security"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNearMe"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvSecurity"
+                app:layout_constraintStart_toStartOf="@+id/tvSecurity"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecurity" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupSecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvChangePassword,tvNotification,tvSecure" />
+
+
+            <TextView
+                android:id="@+id/tvChangePassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_change_password_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/change_password"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecurity"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvChangePassword"
+                app:layout_constraintStart_toStartOf="@+id/tvChangePassword"
+                app:layout_constraintTop_toBottomOf="@+id/tvChangePassword" />
+
+
+            <TextView
+                android:id="@+id/tvNotification"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_notification_preferences_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/notification_preferences"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvChangePassword"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvNotification"
+                app:layout_constraintStart_toStartOf="@+id/tvNotification"
+                app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
+
+
+            <TextView
+                android:id="@+id/tvSecure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_update_security_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/update_security"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNotification"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvSecure"
+                app:layout_constraintStart_toStartOf="@+id/tvSecure"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecure" />
+
+
+            <TextView
+                android:id="@+id/tvShareApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_share"
+                android:drawableEnd="@drawable/ic_down_arrow"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/share_app"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSecure"
+                app:layout_goneMarginStart="10dp" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="tvShareViaFacebook,tvShareViaMsg,tvShareViaInsta" />
+
+            <TextView
+                android:id="@+id/tvShareViaMsg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:drawableStart="@drawable/ic_share"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/share_by_message"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareApp"
+                app:layout_constraintStart_toStartOf="@+id/tvShareApp"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareApp"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareViaMsg"
+                app:layout_constraintStart_toStartOf="@+id/tvShareViaMsg"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaMsg" />
+
+            <TextView
+                android:id="@+id/tvShareViaInsta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:drawableStart="@drawable/ic_share"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/share_via_instagram"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareApp"
+                app:layout_constraintStart_toStartOf="@+id/tvShareApp"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaMsg"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareViaInsta"
+                app:layout_constraintStart_toStartOf="@+id/tvShareViaInsta"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaInsta" />
+
+            <TextView
+                android:id="@+id/tvShareViaFacebook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_6x"
+                android:drawableStart="@drawable/ic_share"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/share_via_facebook"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareApp"
+                app:layout_constraintStart_toStartOf="@+id/tvShareApp"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaInsta"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareApp"
+                app:layout_constraintStart_toStartOf="@+id/tvShareApp"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaFacebook" />
+
+            <TextView
+                android:id="@+id/tvShareFeedback"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_share_feedback_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/share_feedback"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareViaFacebook"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvShareFeedback"
+                app:layout_constraintStart_toStartOf="@+id/tvShareFeedback"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareFeedback" />
+
+            <TextView
+                android:id="@+id/tvGbrxStore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_recent_purchases_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/givebackrx_stores"
+                android:visibility="visible"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvShareFeedback"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvGbrxStore"
+                app:layout_constraintStart_toStartOf="@+id/tvGbrxStore"
+                app:layout_constraintTop_toBottomOf="@+id/tvGbrxStore" />
+
+            <TextView
+                android:id="@+id/tvGetHelp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_get_help_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/get_help"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGbrxStore"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvGetHelp"
+                app:layout_constraintStart_toStartOf="@+id/tvGetHelp"
+                app:layout_constraintTop_toBottomOf="@+id/tvGetHelp" />
+
+            <TextView
+                android:id="@+id/tvHelpTicket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_help_ticket_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/help_ticket"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGetHelp"
+                app:layout_goneMarginStart="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/light_gray_color_new_lighter"
+                app:layout_constraintEnd_toEndOf="@+id/tvHelpTicket"
+                app:layout_constraintStart_toStartOf="@+id/tvHelpTicket"
+                app:layout_constraintTop_toBottomOf="@+id/tvHelpTicket" />
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4x"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:drawableStart="@drawable/ic_logout_on"
+                android:drawableEnd="@drawable/ic_next"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="@string/sign_out"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHelpTicket"
+                app:layout_goneMarginStart="10dp" />
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_4x"
+                android:drawableStart="@drawable/ic_globe"
+                android:drawableEnd="@drawable/ic_dropdown"
+                android:drawableTint="@color/black_color"
+                android:drawablePadding="@dimen/small_margin"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_2x"
+                android:text="English"
+                android:visibility="gone"
+                android:background="@drawable/rounded_et_bg_pink"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginStart="10dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

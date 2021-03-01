@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <CheckedTextView
+        android:id="@+id/rbBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/checkable_radio_drawable"
+        android:layout_marginTop="4dp"
+        android:buttonTint="@color/blue_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cardTypeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/givebackroundedetbg"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/robotoregular"
+        android:layout_marginStart="@dimen/small_margin"
+        android:padding="@dimen/margin_1x"
+        android:text="VISA"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_small"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/rbBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:padding="@dimen/margin_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/mCardNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/robotoregular"
+        android:maxLines="2"
+        android:text="@string/xxxx_xxxx_xxxx_1234"
+        android:textColor="@color/grey_color_as_silver"
+        android:textSize="@dimen/text_mediumLarge"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cardTypeName"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        app:layout_constraintStart_toEndOf="@+id/cardTypeName"
+        app:layout_constraintTop_toTopOf="@+id/cardTypeName" />
+
+    <TextView
+        android:id="@+id/tvExpiry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:visibility="gone"
+        android:text="Expiration Date"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintEnd_toStartOf="@+id/tvCVV"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mCardNum" />
+
+    <TextView
+        android:id="@+id/tvCVV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:padding="@dimen/margin_1x"
+        android:text="CVV"
+        android:visibility="gone"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvExpiry"
+        app:layout_constraintTop_toBottomOf="@+id/mCardNum" />
+
+    <EditText
+        android:id="@+id/etExpiry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/givebackroundedetbg"
+        android:digits="0123456789/"
+        android:fontFamily="@font/robotoregular"
+        android:inputType="number"
+        android:maxLength="7"
+        android:padding="@dimen/margin_2x"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:hint="12/2050"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvExpiry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpiry" />
+
+    <EditText
+        android:id="@+id/etCVV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/givebackroundedetbg"
+        android:fontFamily="@font/robotoregular"
+        android:inputType="number"
+        android:visibility="gone"
+        android:maxLength="3"
+        android:hint="XXX"
+        android:padding="@dimen/margin_2x"
+        android:singleLine="true"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toEndOf="@id/tvCVV"
+        app:layout_constraintStart_toStartOf="@id/tvCVV"
+        app:layout_constraintTop_toBottomOf="@+id/tvCVV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
